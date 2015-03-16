@@ -19,20 +19,12 @@ public class BMIManager {
             int choice = scanner.nextInt();
             scanner.nextLine();
 
-            public static void viewPatient(Patient patient) {
-
-            }
-            public static void addPatient(Patient patient) {
-
-            }
-
-
             switch (choice) {
                 case 1: {
-                    viewPatient
+                    viewPatient(patient);
                 }
                 case 2: {
-                    addPatient
+                    addPatient(patient);
                 }
                 case 3: {
                     System.out.println("Goodbye");
@@ -40,5 +32,22 @@ public class BMIManager {
                 }
             }
         }
+    }
+
+
+    public static void viewPatient(Patient patient) {
+        System.out.println(String.format("Name: %s Age: %d BMI: %.2f",patient.getName(), patient.getAge(), patient.getBMI() ) );
+    }
+
+    public static void addPatient(Patient patient) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Enter your name: ");
+        String name = scanner.nextLine();
+        System.out.println("Enter your age: ");
+        int age = scanner.nextInt();
+        System.out.println("Enter your height (in metres)");
+        double height = scanner.nextDouble();
+        System.out.println("Enter your weight (in kgs)");
+
     }
 }
