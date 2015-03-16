@@ -21,10 +21,12 @@ public class BMIManager {
 
             switch (choice) {
                 case 1: {
-                    viewPatient(patient);
+                    addPatient(patient);
+                    break;
                 }
                 case 2: {
-                    addPatient(patient);
+
+                    break;
                 }
                 case 3: {
                     System.out.println("Goodbye");
@@ -48,6 +50,11 @@ public class BMIManager {
         System.out.println("Enter your height (in metres)");
         double height = scanner.nextDouble();
         System.out.println("Enter your weight (in kgs)");
+        double weight = scanner.nextDouble();
+
+        patient.setName(name);
+        patient.setAge(age);
+        patient.setDetails(height, weight);
 
     }
 }
